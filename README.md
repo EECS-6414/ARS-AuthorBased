@@ -1,6 +1,6 @@
 # NTA-AuthorBased
 
-This is one of two app Google Play Store app recommendation systems for EECS 6414 Team 2.
+This is one of two Google Play Store app recommendation systems for EECS 6414 Team 2.
 This constructs a top 5 recommended apps list for each relevant user based on the comments of similar users.
 
 ## Packages Utilized
@@ -23,7 +23,7 @@ From this list the program takes the top 5 to give as output.
 
 ## Input File
 
-A preprocessed user comment list (frequency csv file) is required to create the files necessary to produce the recommendation output.
+A user comment list (frequency csv file) is required to create the files necessary to produce the recommendation output.
 This file has a list of users with all of the apps they have commented on.
 
 A csv list of all apps is required as well.
@@ -44,4 +44,11 @@ If you choose to, and the name is present in the current data, then a top 5 list
 
 ## Negative Sentiment Analysis
 
-We also added a program to measure how author sentiment grows more negative based on author activity.
+We also added a program to measure how author sentiment grows increasingly negative based on author activity.
+The output of this program on an anlysis of 10k users can be seen below.
+![alt text](https://github.com/EECS-6414/NTA-AuthorBased/tree/master/negativeSentiment10k.jpg?raw=true)
+
+## Disclaimer
+
+Due to the proprietary nature of the data utilized we are unable to add it to this repository.
+We would like thank Dr. Nayebi for giving us access to said data.

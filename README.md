@@ -1,4 +1,4 @@
-# NTA-AuthorBased
+# Recommendation System - Author Based
 
 This is one of two Google Play Store app recommendation systems for EECS 6414 Team 2.
 This constructs a top 5 recommended apps list for each relevant user based on the comments of similar users.
@@ -46,7 +46,7 @@ If you choose to, and the name is present in the current data, then a top 5 list
 
 We also added a program to measure how author sentiment grows increasingly negative based on author activity.
 The output of this program on an anlysis of 10k users can be seen below.
-![alt text](https://github.com/EECS-6414/NTA-AuthorBased/tree/master/negativeSentiment10k.jpg?raw=true)
+![](negativeSentiment10k.jpg)
 
 ## Disclaimer
 

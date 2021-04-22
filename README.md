@@ -10,7 +10,8 @@ VADER Sentiment, NetworkX, PyLab, Pandas, and MatPlotLib
 
 ## How it Works
 
-The program takes a preprocessed user comment list to construct an initial network topology. Essentially building off of the bones of our original network topology program.
+The program takes a user comment list and checks each user against a set of preprocessed sentiment lists to construct an initial sentiment based bipartite network topology graph.
+Essentially building off of the bones of our original network topology program.
 From here the program generates a folded graph based on the author nodes of the network topology. Authors that share a comment on an app will have an edge on the subsequent folded graph.
 Only comments with positive sentiment are considered to make sure the users share a positive common interest.
 Then the program will take the folded graph and generate a new bipartite graph linking comment authors to apps that authors with similar interests commented on that they didn't.
@@ -25,7 +26,7 @@ From this list the program takes the top 5 to give as output.
 A preprocessed user comment list (frequency csv file) is required to create the files necessary to produce the recommendation output.
 This file has a list of users with all of the apps they have commented on.
 
-A csv list of all apps is reqjuired as well.
+A csv list of all apps is required as well.
 
 ## How to Run
 
@@ -40,3 +41,7 @@ This is necessary for your first run, but if it's already been processed, and th
 
 - The second will ask if you would like to input a name.
 If you choose to, and the name is present in the current data, then a top 5 list of app recommendations will be displayed in the terminal.
+
+## Negative Sentiment Analysis
+
+We also added a program to measure how author sentiment grows more negative based on author activity.

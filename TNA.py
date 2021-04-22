@@ -2,13 +2,7 @@ import pandas
 from pylab import *
 import networkx as nx
 import pandas as pd
-import matplotlib.lines as mlines
 from operator import itemgetter
-from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
-
-#from degree.printCharts import printHistograms
-from fileNames import files
-from statistics import mean
 
 def timeit(func):
     """
@@ -60,7 +54,6 @@ def TNAfunc(path, names):
     # Create dictionary for author values. Including name, apps commented on, and number of apps commented on
     print("getting comments...")
     count=0
-    #evalCount=0
     for i in range(dataset['Author'].count()):
         aVal1 = dataset['Author'][i]
         aVal2 = dataset['App'][i]
@@ -72,12 +65,10 @@ def TNAfunc(path, names):
         for p in parts:
             listAux.append(p)
         listAux = set(listAux)
-        #if range(listAux) > 2
         if len(parts) != len(listAux):
             count+=1
         else:
             authListHash[aVal1] = aVal2, aVal3, aVal4
-    #authListHash.pop('Boonk Gang') #bugfix (app = author)
     print("Repeated names of authors: "+str(count))
 
 
@@ -87,9 +78,7 @@ def TNAfunc(path, names):
     # Here we add the sentiment besides the app name with the separator "!?$"
     for index, item in enumerate(names):
         print("processing index (out of 500): "+str(index))
-        #print(names)
         try:
-            #print("Y'all")
             filePath = pandas.read_csv(str(path+"/"+item))
         except:
             print("couldn't read file")
@@ -241,7 +230,6 @@ def TNAfunc(path, names):
     colors = nx.get_edge_attributes(G, 'color').values()
 
     print("Graph completed!")
-    #printHistograms(G, authListHash2.keys(), listWithAllAppsHash.keys())
     print("Saving graph...")
     #save graph in disk
     nx.write_gpickle(G, "G_COMPLETE.gpickle")

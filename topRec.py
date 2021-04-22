@@ -27,8 +27,6 @@ def authorNegativeSentimentTest(authL):
     print("\t- reviewed at least 5 apps\n\t- had at least 1 positive review\n\n\t",percentage,"%")
 
 def topRecFunc(name):
-    count = 0
-    max = 5
     roundedValue = 2
     S = nx.read_gpickle("S_COMPLETE.gpickle")
     appList = pd.read_csv('apps_names.csv', delimiter=',')

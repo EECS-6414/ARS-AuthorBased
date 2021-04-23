@@ -34,7 +34,7 @@ To run the program you can type the following into your terminal:
 
 > python main.py
 
-At this point you will be prompted with two questions:
+At this point you will have three potential question prompts:
 
 - The first will ask if you would like to update the graph data.
 This is necessary for your first run, but if it's already been processed, and the frequency file is unchanged, you can skip it.
@@ -42,9 +42,12 @@ This is necessary for your first run, but if it's already been processed, and th
 - The second will ask if you would like to input a name.
 If you choose to, and the name is present in the current data, then a top 5 list of app recommendations will be displayed in the terminal.
 
+- The third will ask if you would like to reevaluate the negative sentiment analysis.
+This is only necessary if you have updated the data, otherwise the result will be the same.
+
 ## Negative Sentiment Analysis
 
-We also added a program to measure how author sentiment grows increasingly negative based on author activity.
+As noted, we also added a program to measure how author sentiment grows increasingly negative based on author activity.
 The output of this program on an anlysis of 10k users can be seen below.
 
 ![](negativeSentiment10k.jpg)

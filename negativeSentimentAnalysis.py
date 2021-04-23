@@ -62,15 +62,11 @@ def positiveSentiment(path, names, countDict):
                     else:
                         countDictNew[len(Y.edges(u))] += 1
 
-    print(countDictNew)
-
     return countDictNew
 
 def negativeAnalysis(val1, val2):
 
     negativeCount = {}
-
-    print("Val:", val1, val2)
 
     for i in val1:
         if i in val2.keys():
@@ -87,12 +83,8 @@ def negativeAnalysis(val1, val2):
 
     keyListOrdered.sort()
 
-    print(keyListOrdered)
-
     for i in keyListOrdered:
         negativeCountOrdered[i] = negativeCount[i]
-
-    print(negativeCountOrdered)
 
     return negativeCountOrdered
 
@@ -120,23 +112,24 @@ def printNegativeAnalysis(val1, val2, val3):
     for i in val3:
         userCount3.append(val3.get(i))
 
-    ax.bar(val1Labels, userCount1, width=1, label='Total User Count')  # , yerr=men_std)
-    ax.bar(val2Labels, userCount2, width=1, label='Blended Sentiment User Count')
+    ax.bar(val1Labels, userCount1, width=1, label='Total Author Count')  # , yerr=men_std)
+    ax.bar(val2Labels, userCount2, width=1, label='Blended Sentiment Author Count')
 
     ax2 = ax.twinx()
     ax2.plot(val3Labels, userCount3, color="C3", marker="D", ms=7)
     ax2.yaxis.set_major_formatter(PercentFormatter())
 
     handles, labels = ax.get_legend_handles_labels()
-    patch = mpatches.Patch(color='red', label='% of Purely Negative Users')
+    patch = mpatches.Patch(color='red', label='% of Purely Negative Authors')
     handles.append(patch)
     plt.legend(handles=handles, loc='center right')
 
-    ax.set_ylabel('Number of Users')
-    ax.set_xlabel('Number of Comments per User')
+    ax.set_ylabel('Number of Authors')
+    ax.set_xlabel('Number of Comments per Author')
     ax.set_title('Negative Sentiment Analysis')
 
-    plt.savefig('negativeSentiment.eps', format='eps')
+    print("Saving files")
+
     plt.savefig('negativeSentiment.jpg', format='jpg')
 
     plt.show()

@@ -57,6 +57,7 @@ def topRecFunc(name):
     else:
         return {}
 
+# Function is used to rank weighted edges from the recommendation bipartite graph
 def topRecListFunc(name, authorList):
     if len(authorList) > 0:
 

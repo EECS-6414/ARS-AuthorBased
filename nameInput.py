@@ -1,5 +1,6 @@
 from topRec import authorListCurrent
 
+# Function for adding author name
 def nameInputFunc():
     name = input("\nEnter an author's name:\n")
     max = 3
@@ -10,6 +11,7 @@ def nameInputFunc():
             break
     return name
 
+# Function to ask users if they'd like to check for an authors recommendation list
 def newName():
     nd = input("\nDo you want to check for an author's recommendation list? (y/n):\n")
     max = 3
@@ -27,6 +29,7 @@ def newName():
             print("Too many failed attempts.")
     return False
 
+# Function to ask users if they'd like to update the comment data
 def newDataFunc():
     nd = input("\nDo you want to update the comment data? (y/n):\n")
     max = 3
@@ -44,6 +47,7 @@ def newDataFunc():
             print("Too many failed attempts.")
     return False
 
+# Function to ask users if they'd like to check for negative sentiment analysis data
 def newNegativeSentimentAnalysis():
     nd = input("\nDo you want to generate a new negative sentiment analysis? (y/n):\n")
     max = 3

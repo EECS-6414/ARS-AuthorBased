@@ -5,6 +5,7 @@ import pandas as pd
 from networkx.readwrite import json_graph
 from FGA import FGAfunc
 
+# Function creates a new bipartite graph that is utilized for user recommendations
 def authorRankFunc():
     print("Step ARC:", time.strftime("%H:%M:%S", time.localtime()))
     dataset = pd.read_csv('frequencyTest.csv', delimiter=',')

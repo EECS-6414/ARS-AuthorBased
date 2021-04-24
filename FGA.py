@@ -2,6 +2,7 @@ import networkx as nx
 import pandas as pd
 import time
 
+# This function folds the original bipartite network into an author only network
 def FGAfunc():
 
     t = time.localtime()

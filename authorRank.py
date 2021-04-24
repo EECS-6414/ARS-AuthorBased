@@ -82,21 +82,13 @@ def authorRankFunc():
 
     S.remove_nodes_from(list(nx.isolates(S)))
 
-    #####################################################
-    #####################################################hEdgeCount = {}
-    #####################################################for f in S.nodes:
-        #####################################################hEdgeCount[f] = len(S.edges(f))
-    #####################################################
-
-    #####################################################nodeWeight = [float(l) * 20 for x, l in hEdgeCount.items()]
-
     # Map to layout #####################################################
-    #####################################################plt.clf()
+    #plt.clf()
     #pos = nx.spring_layout(S, k=0.85, iterations=20, scale=10)
-    #####################################################pos = nx.bipartite_layout(S, T.nodes())
+    #pos = nx.bipartite_layout(S, T.nodes())
     #pos = nx.circular_layout(S)
     #print(nx.info(S))
-    #####################################################plt.figure(1, figsize=(100, 100))
+    #plt.figure(1, figsize=(100, 100))
     #####################################################
 
     print("Step 9:", time.strftime("%H:%M:%S", time.localtime()))
